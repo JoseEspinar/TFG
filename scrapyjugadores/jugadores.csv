@@ -1,37 +1,92 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-jugadores
-Media Kit
-
-
-
-
-
-
-
-
+aname,estadisticas,id,peso,pos,price,ver
+"Pelé,Lionel Messi,Karim Benzema,Kylian Mbappé,Kevin De Bruyne,Zinedine Zidane,Ronaldo,Kevin De Bruyne,Erling Haaland,Ronaldo,Zinedine Zidane,Pelé,Thibaut Courtois,Virgil van Dijk,Luka Modric,Erling Haaland,Mohamed Salah,Rúben Dias,Pelé,Ronaldo,Zinedine Zidane,Jude Bellingham,Ronaldinho,Müller,Ferenc Puskás,Paolo Maldini,Alessandro Del Piero,Franco Baresi,Xavier Hernández,Marco van Basten","98,3.95M ,H,M,95,96,93,96,60,76,98,4.85M ,H,L,93,98,97,99,40,77,97,2.18M ,H,M,92,97,90,94,45,90,97,12.4M ,H,L,99,96,88,98,44,87,97,2.46M ,H,H,85,94,98,94,81,86,97,4.69M ,H,H,86,92,96,95,81,88,97,0 ,H,M,97,96,82,96,45,82,97,2.38M ,H,H,84,92,99,95,85,87,97,6.24M ,H,M,97,97,82,90,61,95,96,8.43M ,M,M,97,95,81,95,45,76,96,2.3M ,M,M,85,92,96,95,75,86,96,4M ,H,M,96,94,92,95,58,75,96,415K ,M,M,90,95,85,97,60,95,96,2.29M ,M,H,88,65,80,83,97,94,96,800K ,M,M,85,86,97,97,85,83,96,3.7M ,H,M,96,96,80,88,60,94,96,2.77M ,H,M,96,95,90,97,54,83,96,750K ,M,H,88,48,83,83,97,97,95,2.64M ,H,M,96,93,90,95,56,75,95,7.34M ,M,M,95,94,80,94,46,78,95,2.09M ,M,M,84,91,94,94,73,85,95,1.99M ,H,H,88,88,92,96,90,92,95,0 ,H,L,94,91,92,97,38,83,95,805K ,H,M,89,95,79,90,45,78,95,1.68M ,H,M,89,97,93,93,48,78,95,2.43M ,M,H,87,57,77,72,97,87,95,955K ,H,M,89,95,92,95,46,72,95,350K ,M,H,84,51,80,74,97,86,95,519K ,H,H,84,82,97,95,76,78,95,93.5K ,M,M,88,96,78,92,41,82",[0]," ,  (70kg), ,  (67kg), ,  (81kg), ,  (73kg), ,  (70kg), ,  (77kg), ,  (78kg), ,  (70kg), ,  (94kg), ,  (78kg), ,  (77kg), ,  (70kg), ,  (96kg), ,  (92kg), ,  (66kg), ,  (94kg), ,  (71kg), ,  (82kg), ,  (69kg), ,  (78kg), ,  (77kg), ,  (75kg), ,  (78kg), ,  (74kg), ,  (72kg), ,  (83kg), ,  (74kg), ,  (70kg), ,  (67kg), ,  (78kg)","CAM,RW,CF,ST,CM,CAM,ST,CM,ST,ST,CAM,CF,GK,CB,CM,ST,RW,CB,CF,ST,CAM,CM,LW,ST,CF,CB,CF,CB,CM,ST","3.95M ,4.85M ,2.18M ,12.4M ,2.46M ,4.69M ,0 ,2.38M ,6.24M ,8.43M ,2.3M ,4M ,415K ,2.29M ,800K ,3.7M ,2.77M ,750K ,2.64M ,7.34M ,2.09M ,1.99M ,0 ,805K ,1.68M ,2.43M ,955K ,350K ,519K ,93.5K ","Icon,
+                                                ,
+                                            ,TOTY,
+                                                ,
+                                            ,TOTY,
+                                                ,
+                                            ,TOTY,
+                                                ,
+                                            ,TOTY,
+                                                ,
+                                            ,Trophy Titans - ICON,
+                                                ,
+                                            ,Trophy Titans - ICON,
+                                                ,
+                                            ,TOTS,
+                                                ,
+                                            ,TOTS,
+                                                ,
+                                            ,Icon,
+                                                ,
+                                            ,Icon,
+                                                ,
+                                            ,World Cup ICON,
+                                                ,
+                                            ,TOTY,
+                                                ,
+                                            ,TOTY,
+                                                ,
+                                            ,TOTY,
+                                                ,
+                                            ,TOTY,
+                                                ,
+                                            ,TOTS,
+                                                ,
+                                            ,TOTS,
+                                                ,
+                                            ,Icon,
+                                                ,
+                                            ,World Cup ICON,
+                                                ,
+                                            ,World Cup ICON,
+                                                ,
+                                            ,TOTY,
+                                                ,
+                                            ,TOTY Icon,
+                                                ,
+                                            ,TOTY Icon,
+                                                ,
+                                            ,
+                                                ,
+                                            ,
+                                                ,
+                                            ,Trophy Titans - ICON,
+                                                ,
+                                            ,Trophy Titans - ICON,
+                                                ,
+                                            ,Trophy Titans - ICON,
+                                                ,
+                                            ,Trophy Titans - ICON,
+                                                ,
+                                            ,
+                                                    Explosive                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Explosive                                                ,
+                                                    Controlled                                                ,
+                                                    Lengthy                                                ,
+                                                    Explosive                                                ,
+                                                    Lengthy                                                ,
+                                                    Controlled                                                ,
+                                                    Lengthy                                                ,
+                                                    Explosive                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Lengthy                                                ,
+                                                    Explosive                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                ,
+                                                    Controlled                                                "

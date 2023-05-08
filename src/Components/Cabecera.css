@@ -1,0 +1,21 @@
+.Cabecera{
+    width:100%;
+    background-color: black;
+    padding:1em;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    color:white;
+}
+.Cabecera-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.Cabecera-li{
+    margin: 0 .5em;
+}
