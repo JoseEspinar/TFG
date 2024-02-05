@@ -1,0 +1,14 @@
+.Inicio {
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+  
+  .Inicio h2 {
+    font-size: 1.5em; /* Ajusta el tamaño de la fuente según tus preferencias */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    text-align: center; /* Alinea el h2 al centro */
+    margin-bottom: 1em;
+  }
+  
+  .Inicio p {
+    margin-bottom: 1em; /* Ajusta el margen inferior según tus preferencias */
+  }
