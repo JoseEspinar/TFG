@@ -1,0 +1,28 @@
+.FUT {
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+  
+  .FUT h2 {
+    font-size: 1.5em; /* Ajusta el tamaño de la fuente según tus preferencias */
+    font-weight: bold; /* Hace que el texto sea negrita */
+     /* Alinea el h2 al centro */
+    margin-bottom: 1em;
+  }
+
+  .FUT strong {
+    font-weight: bold;
+  }
+  
+  .FUT p {
+    margin-bottom: 1em; /* Ajusta el margen inferior según tus preferencias */
+  }
+  .FUT li:before {
+    margin-bottom: 1em; /* Ajusta el margen inferior según tus preferencias */
+    content: "-";
+  }
+  .FUT img {
+    width: 50%; /* Reducir el ancho a la mitad */
+    display: block; /* Convertir la imagen en un bloque para aplicar text-align */
+    margin: 0 auto; /* Alinear la imagen al centro horizontalmente */
+    margin-bottom: 1em;
+  }

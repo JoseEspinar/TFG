@@ -32,65 +32,23 @@ ActionChains(driver).move_to_element(elemento_tabla).click().perform()
 #//tr[@style="display: table-row;"]
 
 class Campos(Item):
-    aname = Field ()
-    rating = Field()
-    price = Field ()
-    club = Field () 
-    nation = Field()
-    liga = Field ()
-    pos = Field ()
-    pierna = Field()
-    altura = Field ()
-    peso = Field ()
-    pace = Field ()
-    shooting = Field ()
-    passing = Field ()
-    dribbling = Field ()
-    defending = Field ()
-    physicality = Field ()
+    Aname = Field ()
+    Brating = Field()
+    Cpos = Field ()
+    Dclub = Field () 
+    Enation = Field()
+    Fliga = Field ()
+    Gprice = Field ()
+    Hpierna = Field()
+    Ipace = Field ()
+    Jshooting = Field ()
+    Kpassing = Field ()
+    Ldribbling = Field ()
+    Mdefending = Field ()
+    Nphysicality = Field ()
+    Raltura = Field ()
+    Speso = Field ()
     
-    '''
-    accel = Field ()
-    sprintSpeed = Field ()
-    
-    attpositioning = Field ()
-    finishing = Field ()
-    shotPower = Field ()
-    longShot = Field ()
-    volleys = Field ()
-    penalties = Field()
-    
-    vision = Field ()
-    crossing = Field ()
-    fkAccur = Field ()
-    shortPass = Field ()
-    longPass = Field ()
-    curve = Field ()
-    
-    agility = Field ()
-    balance = Field ()
-    reactions = Field ()
-    ballControl = Field ()
-    dribbling = Field ()
-    composure = Field ()
-    
-    interceptions = Field ()
-    headingAcc = Field ()
-    defAwar = Field ()
-    standingTac = Field ()
-    slidingTackle = Field ()
-    
-    jumping = Field ()
-    stamina = Field ()
-    strength = Field ()
-    aggression = Field ()
-    diving = Field ()
-    handling = Field ()
-    kicking = Field ()
-    reflexes = Field ()
-    speed = Field ()
-    positioning = Field ()
-    '''
 
 
 
@@ -119,6 +77,31 @@ class Players(scrapy.Spider):
     }
 
     def parse(self, response):
+        players = response.xpath('//tbody/tr')
+        for player in players:
+            item = ItemLoader(item=Campos(), selector=player)
+            
+            # Agrega los atributos del jugador al ItemLoader
+            item.add_xpath('Aname', './/td[@class="table-row-text row"]/div[@class="d-inline pt-2 pl-3"]/div/a/text()')
+            item.add_xpath('Brating', './/td[3]/span/text()')
+            item.add_xpath('Gprice', './/td[6]/span/text()')
+            item.add_xpath('Dclub', './/td[@class="table-row-text row"]/div[@class="d-inline pt-2 pl-3"]/div/span/a[1]/@data-original-title')
+            item.add_xpath('Enation', './/td[@class="table-row-text row"]/div[@class="d-inline pt-2 pl-3"]/div/span/a[2]/@data-original-title')
+            item.add_xpath('Fliga', './/td[@class="table-row-text row"]/div[@class="d-inline pt-2 pl-3"]/div/span/a[3]/@data-original-title')
+            item.add_xpath('Cpos', './/td/div[@class="font-weight-bold"]/text()')
+            item.add_xpath('Hpierna', './/td[8]/text()')
+            item.add_xpath('Raltura', './/td[16]/div[1]/text()')
+            item.add_xpath('Speso', './/td/div[@style="font-size: 12px; "]/text()[2]')
+            item.add_xpath('Ipace', './/td[10]/span/text()')
+            item.add_xpath('Jshooting', './/td[11]/span/text()')
+            item.add_xpath('Kpassing', './/td[12]/span/text()')
+            item.add_xpath('Ldribbling', './/td[13]/span/text()')
+            item.add_xpath('Mdefending', './/td[14]/span/text()')
+            item.add_xpath('Nphysicality', './/td[15]/span/text()')
+            
+            # Carga y emite el ítem con todos los atributos del jugador
+            yield item.load_item()
+        '''
         # Imprimir la respuesta para verificar si hay algún problema en la obtención de la página
         print(response)
         
@@ -144,7 +127,7 @@ class Players(scrapy.Spider):
        
 
         yield item.load_item()
-
+'''
 
 
     '''

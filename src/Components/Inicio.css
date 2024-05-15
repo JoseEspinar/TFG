@@ -12,3 +12,9 @@
   .Inicio p {
     margin-bottom: 1em; /* Ajusta el margen inferior según tus preferencias */
   }
+  .Inicio img {
+    width: 50%; /* Reducir el ancho a la mitad */
+    display: block; /* Convertir la imagen en un bloque para aplicar text-align */
+    margin: 0 auto; /* Alinear la imagen al centro horizontalmente */
+    margin-bottom: 1em;
+  }

@@ -1,9 +1,11 @@
 import React from 'react';
 import './Inicio.css';
+import Logo from '../Images/Logo.jpg';
 
 const Inicio = () => {
     return (
         <div className='Inicio'>
+            <br></br>
             <h2>Bienvenido al Mundo FIFA</h2>
             <p>
             Desde hace años, FIFA ha sido uno de los videojuegos deportivos más populares en todo el mundo. Su último lanzamiento, FIFA 23, vendió más de 10,3 millones de copias en su primera semana, tanto en formato físico como digital. Uno de los principales factores que contribuyen al éxito de FIFA es su modo Ultimate Team, que permite a los usuarios crear su propio equipo desde cero utilizando artículos de jugador coleccionables. Con miles de jugadores disponibles en Ultimate Team, las posibilidades de formar equipos son prácticamente infinitas.
@@ -29,7 +31,7 @@ const Inicio = () => {
             identificar a los mejores jugadores de FIFA Ultimate Team en función de diferentes
             atributos de los jugadores.
             </p>
-            <img src="../Images/Logo.jpg" alt="Descripción de la imagen" />
+            <img src={Logo} alt="Logo del juego" />
         </div>
     );
 }

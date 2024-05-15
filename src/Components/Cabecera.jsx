@@ -9,9 +9,10 @@ const Cabecera = () => {
                     <nav className="Cabecera-nav">
                         <ul className="Cabecera-ul">
                             <li className="Cabecera-li"><NavLink to="/Inicio" className="Cabecera-a">Inicio</NavLink></li>
-                            <li className="Cabecera-li"><NavLink to="/QuienesSomos" className="Cabecera-a">Quienes somos</NavLink></li>
-                            <li className="Cabecera-li"><a href="/alineaciones" className="Cabecera-a">Alineaciones</a></li>
-                            <li className="Cabecera-li"><a href="/consultarJugadores" className="Cabecera-a">Consultar jugadores</a></li>
+                            <li className="Cabecera-li"><NavLink to="/FUT" className="Cabecera-a">Ultimate Team</NavLink></li>
+                            <li className="Cabecera-li"><NavLink to="/Alineaciones" className="Cabecera-a">Alineaciones</NavLink></li>
+                            <li className="Cabecera-li"><NavLink to="/ConsultarJugadores" className="Cabecera-a">Consultar Tabla</NavLink></li>
+                            <li className="Cabecera-li"><NavLink to="/Topsis" className="Cabecera-a">TOPSIS</NavLink></li>
                         </ul>
                     </nav>
                 </a>
