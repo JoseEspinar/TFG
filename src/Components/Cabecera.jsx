@@ -1,24 +1,36 @@
 import './Cabecera.css';
 import { NavLink } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const Cabecera = () => {
     return (
         <header className="Cabecera">
-            <h1 className="Cabecera-h1">
-                <a href="#" className="Cabecera-a">
-                    <nav className="Cabecera-nav">
-                        <ul className="Cabecera-ul">
-                            <li className="Cabecera-li"><NavLink to="/Inicio" className="Cabecera-a">Inicio</NavLink></li>
-                            <li className="Cabecera-li"><NavLink to="/FUT" className="Cabecera-a">Ultimate Team</NavLink></li>
-                            <li className="Cabecera-li"><NavLink to="/Alineaciones" className="Cabecera-a">Alineaciones</NavLink></li>
-                            <li className="Cabecera-li"><NavLink to="/ConsultarJugadores" className="Cabecera-a">Consultar Tabla</NavLink></li>
-                            <li className="Cabecera-li"><NavLink to="/Topsis" className="Cabecera-a">TOPSIS</NavLink></li>
-                        </ul>
-                    </nav>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a className="navbar-brand" href="#">
+                    FIFA 
                 </a>
-            </h1>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav ml-auto">
+                        <li className="nav-item">
+                            <NavLink to="/Inicio" className="nav-link">Inicio</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to="/FUT" className="nav-link">Ultimate Team</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to="/Alineaciones" className="nav-link">Alineaciones</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to="/Analisis" className="nav-link">TOPSIS</NavLink>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </header>
     );
 }
-
 export default Cabecera

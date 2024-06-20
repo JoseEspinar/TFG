@@ -1,5 +1,18 @@
-.container{
+.container-footer {
     background-color: black;
-    margin-top: auto;
     color: white;
+    padding: 20px 0; /* Añade espacio alrededor del contenido del footer */
+    text-align: center; /* Centra el contenido */
+    margin-top: auto; /* Hace que el footer se coloque al final de la página */
+}
+
+.footerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footercompany {
+    font-size: 0.9em; /* Ajusta el tamaño de la fuente */
+    color: white; /* Asegura que el texto sea blanco */
 }

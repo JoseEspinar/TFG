@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Alineaciones = () => {
     const [csvData, setCsvData] = useState([]);
@@ -9,18 +10,16 @@ const Alineaciones = () => {
     const [valorDeseado, setValorDeseado] = useState('');
     const [jugadoresSugeridos, setJugadoresSugeridos] = useState([]);
     const [mostrarTabla, setMostrarTabla] = useState(true);
+    const [errorMensaje, setErrorMensaje] = useState('');
 
     useEffect(() => {
         const fetchCSVData = async () => {
-            // Ruta relativa al archivo CSV
             const filePath = 'jugadores.csv';
 
-            // Intenta cargar el archivo CSV automáticamente
             try {
                 const response = await fetch(filePath);
                 const csvString = await response.text();
 
-                // Analiza el CSV y almacena los datos en el estado
                 Papa.parse(csvString, {
                     header: true,
                     skipEmptyLines: true,
@@ -57,9 +56,9 @@ const Alineaciones = () => {
     };
 
     const handleSugerirJugadorClick = () => {
-        const jugadoresSugeridos = csvData.filter((row) => {
+        const jugadoresFiltrados = csvData.filter((row) => {
             const valor = row[estadisticaSeleccionada];
-            if (!isNaN(valorDeseado)) { // Verifica si el valor deseado es un número
+            if (!isNaN(valorDeseado)) {
                 const numValor = parseFloat(valor);
                 const numDeseado = parseFloat(valorDeseado);
                 return numValor === numDeseado;
@@ -67,8 +66,20 @@ const Alineaciones = () => {
                 return valor.toLowerCase().includes(valorDeseado.toLowerCase());
             }
         });
-        setJugadoresSugeridos(jugadoresSugeridos);
-        setMostrarTabla(false); // Ocultar la tabla después de sugerir jugadores
+
+        if (jugadoresFiltrados.length > 0) {
+            setJugadoresSugeridos(jugadoresFiltrados);
+            setMostrarTabla(false);
+            setErrorMensaje('');
+        } else {
+            setErrorMensaje('No se encontraron jugadores que coincidan con los criterios de búsqueda.');
+        }
+    };
+
+    const handleMostrarTablaClick = () => {
+        setMostrarTabla(true);
+        setJugadoresSugeridos([]);
+        setErrorMensaje('');
     };
 
     const sortedData = [...csvData].sort((a, b) => {
@@ -87,24 +98,36 @@ const Alineaciones = () => {
         }
         return 0;
     });
-    const handleMostrarTablaClick = () => {
-        setMostrarTabla(true);
-    };
-    
+
     return (
-        <div className='Alineaciones'> 
-            <div>
-                <label>Selecciona una estadística:</label>
-                <select value={estadisticaSeleccionada} onChange={handleEstadisticaSeleccionadaChange}>
-                    {csvData.length > 0 && Object.keys(csvData[0]).filter(header => header !== 'Aname').map((header, index) => (
+        <div className="container my-4">
+            <div className="mb-4">
+                <label htmlFor="estadistica" className="form-label">Selecciona una estadística:</label>
+                <select id="estadistica" className="form-select" value={estadisticaSeleccionada} onChange={handleEstadisticaSeleccionadaChange}>
+                    {csvData.length > 0 && Object.keys(csvData[0]).filter(header => header !== 'Name').map((header, index) => (
                         <option key={index} value={header}>{header}</option>
                     ))}
                 </select>
-                <input type="text" value={valorDeseado} onChange={handleValorDeseadoChange} placeholder="Valor deseado" />
-                <button onClick={handleSugerirJugadorClick}>Sugerir Jugador</button>
             </div>
-            {mostrarTabla && ( // Renderizar la tabla solo si mostrarTabla es verdadero
-                <table>
+            <div className="mb-4">
+                <input
+                    type="text"
+                    className="form-control"
+                    value={valorDeseado}
+                    onChange={handleValorDeseadoChange}
+                    placeholder="Valor deseado"
+                />
+            </div>
+            <button className="btn btn-primary mb-4" onClick={handleSugerirJugadorClick}>Sugerir Jugador</button>
+            
+            {errorMensaje && (
+                <div className="alert alert-danger" role="alert">
+                    {errorMensaje}
+                </div>
+            )}
+
+            {mostrarTabla && (
+                <table className="table table-striped">
                     <thead>
                         <tr>
                             {csvData && csvData.length > 0 && Object.keys(csvData[0]).map((header, index) => (
@@ -125,15 +148,29 @@ const Alineaciones = () => {
                     </tbody>
                 </table>
             )}
-            {jugadoresSugeridos && (
+            
+            {jugadoresSugeridos.length > 0 && (
                 <div>
                     <h2>Jugadores Sugeridos:</h2>
-                    <ul>
-                        {jugadoresSugeridos.map((jugador, index) => (
-                            <li key={index}>{JSON.stringify(jugador)}</li>
-                        ))}
-                    </ul>
-                    <button onClick={handleMostrarTablaClick}>Mostrar Tabla</button>
+                    <table className="table table-bordered">
+                        <thead>
+                            <tr>
+                                {Object.keys(jugadoresSugeridos[0]).map((key, index) => (
+                                    <th key={index}>{key}</th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {jugadoresSugeridos.map((jugador, index) => (
+                                <tr key={index}>
+                                    {Object.values(jugador).map((value, index) => (
+                                        <td key={index}>{value}</td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                    <button className="btn btn-secondary" onClick={handleMostrarTablaClick}>Mostrar Tabla</button>
                 </div>
             )}
         </div>
