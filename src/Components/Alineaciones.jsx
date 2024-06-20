@@ -82,6 +82,10 @@ const Alineaciones = () => {
         setErrorMensaje('');
     };
 
+    const handleScrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     const sortedData = [...csvData].sort((a, b) => {
         if (columnaOrden === null) {
             return 0;
@@ -173,8 +177,15 @@ const Alineaciones = () => {
                     <button className="btn btn-secondary" onClick={handleMostrarTablaClick}>Mostrar Tabla</button>
                 </div>
             )}
+
+            <button
+                className="btn btn-light position-fixed"
+                style={{ bottom: '20px', right: '20px', opacity: '0.7' }}
+                onClick={handleScrollToTop}
+            >
+                ↑ Subir
+            </button>
         </div>
     );
 }
-
 export default Alineaciones;
